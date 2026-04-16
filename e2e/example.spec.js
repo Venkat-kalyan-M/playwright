@@ -1,5 +1,6 @@
 // @ts-check
 import { test, expect } from '@playwright/test';
+import { log } from 'node:console';
 
 test('has title', async ({ page }) => {
   await page.goto('https://playwright.dev/');
@@ -10,6 +11,7 @@ test('has title', async ({ page }) => {
 
 test('get started link', async ({ page }) => {
   await page.goto('https://playwright.dev/');
+  log("navigated to Url");
 
   // Click the get started link.
   await page.getByRole('link', { name: 'Get started' }).click();
